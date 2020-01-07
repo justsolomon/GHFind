@@ -1,0 +1,177 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+.search-query {
+	text-align: center;
+	margin-top: 2em;
+}
+
+.input-query,
+.search-button {
+	font-size: 1.5rem;
+	height: 2em;
+}
+
+.input-query {
+	border-radius: 1em;
+	border: 1px solid grey;
+	width: 30%;
+	padding: 1rem;
+}
+
+.search-button {
+	border: none;
+	transition: .3s;
+	color: grey;
+	border-radius: .5rem;
+	cursor: pointer;
+}
+
+.search-button:hover {
+	background: #434343;
+	letter-spacing: 1px;
+	color: white;
+	box-shadow: .3rem 2.5rem -.6rem rgba(0,0,0,0.57);
+}
+
+.user-info {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 2em;
+}
+
+.user-profile {
+	width: 30%;
+	font-size: 1.2rem;
+}
+
+.user-repos {
+	width: 60%;
+}
+
+span{
+	display: block;
+	font-size: 1rem;
+}
+
+em {
+	font-weight: 600;
+	font-style: italic;
+}
+
+.name {
+	font-size: 1.8em;
+	line-height: 30px;
+	color: #24292e;
+	font-weight: 600;
+}
+
+.login {
+	color: #666;
+	line-height: 24px; 
+	font-weight: 300; 
+	font-size: 1.3em;
+}
+
+.follow {
+	display: flex;
+	justify-content: space-between;
+}
+
+.github-profile {
+	display: block;
+	width: 55%;
+	text-align: center;
+	border: 1px solid black;
+	color: black;
+	background-color: white;
+	transition: .5s;
+	padding: .5rem;
+	margin: 1rem auto;
+	text-decoration: none;
+	outline: 0;
+	font-size: 1.2rem;
+}
+
+.github-profile:hover {
+	background-color: black;
+	color: white;
+}
+
+hr {
+	border: .5px solid;
+	opacity: .2;
+}
+
+.repos-header {
+	opacity: .5;
+}
+
+.repo-link {
+	font-size: 1.5rem;
+	font-weight: 600;
+}
+
+.repo-link a {
+	outline: 0;
+	text-decoration: none;
+}
+
+.repo-link a:hover {
+	text-decoration: underline;
+}
+
+.repo-link a:active,
+.repo-link a:visited {
+	color: blue;
+}
+
+.repo-description {
+	font-size: 1.2rem;
+}
+
+#spinner {
+	height: 30em;
+	margin: auto;
+}
+
+.error-message {
+	font-size: 2rem;
+	margin: auto;
+	width: 80%;
+	padding: 1rem;
+}
+
+@media(max-width: 675px) {
+	.input-query,
+	.search-button {
+		font-size: 1rem;
+		height: 1.5em;
+	}
+	.input-query {
+		width: 60%;
+	}
+	.search-button {
+		height: 2em;
+	}
+	.user-info {
+		flex-direction: column;
+	}
+	.user-profile,
+	.user-repos {
+		width: 100%;
+	}
+	img {
+		width: 100%;
+		height: 300px;
+	}
+	.github-profile {
+		width: 90%;
+	}
+	#spinner {
+		height: 18em;
+	}
+}
