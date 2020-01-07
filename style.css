@@ -13,7 +13,11 @@
 .search-button {
 	font-size: 1.5rem;
 	height: 2em;
-	outline: none;
+}
+
+.input-query:focus,
+.search-button:focus {
+	outline: 0;
 }
 
 .input-query {
