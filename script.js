@@ -98,7 +98,7 @@ function displayUserRepos(userRepo) {
 }
 
 function loadSpinner() {
-		const spinner = 'https://media.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif';
+		const spinner = 'loader.webp';
 		const img = `<img src="${spinner}" id="spinner"/>`;
 		userProfile.innerHTML = img;
 		userRepos.innerHTML = img;
@@ -116,10 +116,10 @@ const renderUser = async function(username) {
 				<p class="error-message">Sorry, the username you entered is either incorrect or does not exist. Please try again with a correct username.</p>
 			`
 		} else {
-			loadSpinner();
 			profileContainer.innerHTML = '';
 			profileContainer.appendChild(userProfile);
 			profileContainer.appendChild(userRepos);
+			loadSpinner();
 			displayUserInfo(user);
 			const repos = await getRepos(username);
 			displayUserRepos(repos);
@@ -128,4 +128,7 @@ const renderUser = async function(username) {
 	}
 }
 
-searchButton.addEventListener('click', renderUser)
+searchButton.addEventListener('click', renderUser);
+window.addEventListener('keypress', function(e) {
+	if(e.keyCode === 13) renderUser();
+})
