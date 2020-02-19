@@ -23,8 +23,10 @@ function displayUserInfo(username) {
 			<img src="${username.avatar_url}" alt="user's avatar image">
 			<span class="name">${username.name}</span>
 			<span class="login">${username.login}</span>
-			<a class="github-profile" href="${username.html_url}">View profile on GitHub</a>
-			<p><em>Bio:</em> ${username.bio}</p>
+			<button class="github-profile" href="${username.html_url}">View profile on GitHub</button>
+			<p>${username.bio}</p>
+			<p>📍 ${username.location}</p>
+			<p>🔗 <a class="blog-link" href="${username.blog}">${username.blog}</a></p>
 			<div class="follow">
 				<p><em>Followers:</em> ${username.followers}</p>
 				<p><em>Following:</em> ${username.following}</p>
@@ -35,8 +37,8 @@ function displayUserInfo(username) {
 		userProfile.innerHTML = `
 			<img src="${username.avatar_url}" alt="user's avatar image">
 			<span class="login">${username.login}</span>
-			<a class="github-profile" href="${username.html_url}">View profile on GitHub</a>
-			<p><em>Bio:</em> No bio available for this user</p>
+			<button class="github-profile" href="${username.html_url}">View profile on GitHub</button>
+			<p>No bio available for this user</p>
 			<div class="follow">
 				<p><em>Followers:</em> ${username.followers}</p>
 				<p><em>Following:</em> ${username.following}</p>
@@ -47,8 +49,8 @@ function displayUserInfo(username) {
 		userProfile.innerHTML = `
 			<img src="${username.avatar_url}" alt="user's avatar image">
 			<span class="login">${username.login}</span>
-			<a class="github-profile" href="${username.html_url}">View profile on GitHub</a>
-			<p><em>Bio:</em> ${username.bio}</p>
+			<button class="github-profile" href="${username.html_url}">View profile on GitHub</button>
+			<p>${username.bio}</p>
 			<div class="follow">
 				<p><em>Followers:</em> ${username.followers}</p>
 				<p><em>Following:</em> ${username.following}</p>
@@ -60,7 +62,7 @@ function displayUserInfo(username) {
 			<img src="${username.avatar_url}" alt="user's avatar image">
 			<span class="name">${username.name}</span>
 			<span class="login">${username.login}</span>
-			<a class="github-profile" href="${username.html_url}">View profile on GitHub</a>
+			<button class="github-profile" href="${username.html_url}">View profile on GitHub</button>
 			<p><em>No Bio</em></p>
 			<div class="follow">
 				<p><em>Followers:</em> ${username.followers}</p>
