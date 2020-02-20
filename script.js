@@ -24,7 +24,7 @@ function displayUserInfo(username) {
 			<span class="name">${username.name}</span>
 			<span class="login">${username.login}</span>
 			<button class="github-profile" href="${username.html_url}">View profile on GitHub</button>
-			<p>${username.bio}</p>
+			<p class="bio">${username.bio}</p>
 			<p>📍 ${username.location}</p>
 			<p>🔗 <a class="blog-link" href="${username.blog}">${username.blog}</a></p>
 			<div class="follow">
@@ -50,7 +50,7 @@ function displayUserInfo(username) {
 			<img src="${username.avatar_url}" alt="user's avatar image">
 			<span class="login">${username.login}</span>
 			<button class="github-profile" href="${username.html_url}">View profile on GitHub</button>
-			<p>${username.bio}</p>
+			<p class="bio">${username.bio}</p>
 			<div class="follow">
 				<p><em>Followers:</em> ${username.followers}</p>
 				<p><em>Following:</em> ${username.following}</p>
